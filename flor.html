@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor en HTML y CSS</title>
+    <style>
+        .flor {
+            position: relative;
+            width: 150px;
+            height: 250px;
+            margin: 50px auto;
+        }
+        .petalo {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: pink;
+            border-radius: 50%;
+            box-shadow: 0 0 10px pink;
+            animation: brillo 1.5s infinite alternate;
+        }
+        .petalo:nth-child(1) { top: 0; left: 45px; }
+        .petalo:nth-child(2) { top: 45px; left: 0; }
+        .petalo:nth-child(3) { top: 45px; left: 90px; }
+        .petalo:nth-child(4) { top: 90px; left: 45px; }
+        .centro {
+            position: absolute;
+            top: 45px;
+            left: 45px;
+            width: 60px;
+            height: 60px;
+            background: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 10px yellow;
+            animation: brillo 1.5s infinite alternate;
+        }
+        .tallo {
+            position: absolute;
+            top: 150px;
+            left: 70px;
+            width: 10px;
+            height: 100px;
+            border-radius: 20px;
+            background: green;
+            box-shadow: 0 0 5px green;
+            animation: brillo 1.5s infinite alternate;
+        }
+        .texto {
+            color: aliceblue;
+            text-align: center;
+            font-size: 24px;
+            
+        }
+        @keyframes brillo {
+            from {
+                box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+            }
+            to {
+                box-shadow: 0 0 10px 10px rgb(255, 253, 126);
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #1c2229;">
+    <div class="flor">
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="centro"></div>
+        <div class="tallo"></div>
+    </div>
+    <div class="texto">
+        Te odio 😘!
+    </div>
+</body>
+</html>
